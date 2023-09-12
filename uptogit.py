@@ -5,7 +5,7 @@ os.chdir( os.path.abspath(os.getcwd()) )
 
 # os.system('git add -A ":!uptogit.py"')
 # os.system('git add .')
-os.system('git add . -f "uptogit.py"')
+os.system('git add -f uptogit.py')
 # os.system('git reset -- uptogit.py')
 # os.system('git add -p . :^uptogit.py')
 os.system('git commit -m ",,"')
