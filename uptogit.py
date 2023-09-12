@@ -2,6 +2,7 @@ import os
 os.chdir( os.path.abspath(os.getcwd()) )
 
 # os.system('git add --all -- :!uptogit.py')
+
 os.system('git add . :^uptogit.py')
 os.system('git commit -m ",,"')
 os.system('git pull')
