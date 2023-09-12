@@ -3,8 +3,10 @@ os.chdir( os.path.abspath(os.getcwd()) )
 
 # os.system('git add --all -- :!uptogit.py')
 
-os.system('git add . :^uptogit.py')
+os.system('git add .')
+# os.system('git add . :^uptogit.py')
 os.system('git commit -m ",,"')
+os.system('git reset -- uptogit.py')
 os.system('git pull')
 os.system('git push')
 # os.system('git branch -M main')
