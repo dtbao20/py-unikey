@@ -1,3 +1,6 @@
+#
+#Cre: dtbao20
+#
 from unicodedata import normalize, combining
 import keyboard
 import re
