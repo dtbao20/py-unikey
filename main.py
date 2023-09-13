@@ -55,8 +55,8 @@ def _converter():
     [u:='\u0300\u0301\u0303\u0309\u0323'[i] for i in range(5) if van[-1]=='fsxrj'[i]]
 
     # fix bug change mark more times
-    Lvan = list(normalize("NFKD", VAN[ivan]))
-    if len(Lvan)==2: VAN = VAN[:ivan] + Lvan[0] + VAN[ivan+1:]
+    l_van = list(normalize("NFKD", VAN[ivan]))
+    if len(l_van)==2: VAN = VAN[:ivan] + l_van[0] + VAN[ivan+1:]
 
     char = VAN[ivan] + u
     # print(PHU)
