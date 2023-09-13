@@ -54,6 +54,9 @@ def _converter():
     # if list_key[-1]=='j': u = '\u0323'
     [u:='\u0300\u0301\u0303\u0309\u0323'[i] for i in range(5) if van[-1]=='fsxrj'[i]]
 
+    # fix bug change mark more times
+    Lvan = list(normalize("NFKD", VAN[ivan]))
+    if len(Lvan)==2: VAN = VAN[:ivan] + Lvan[0] + VAN[ivan+1:]
 
     char = VAN[ivan] + u
     # print(PHU)
@@ -73,7 +76,7 @@ def _converter():
     VAN = "".join(VAN)
     list_key = PHU + VAN
     keyboard.write("\b"*(len(VAN)+1) + VAN)
-    print("->",list_key, char, ivan, VAN)
+    # print("->",list_key, char, ivan, VAN)
 """
 
 """
@@ -85,7 +88,7 @@ while True:
         elif key=='shift': pass
         elif key=='backspace': list_key = list_key[:-1]
         else: list_key = ""
-        print(">>",key, list_key)
+        # print(">>",key, list_key)
         # print(list_key)
         _converter()
 
